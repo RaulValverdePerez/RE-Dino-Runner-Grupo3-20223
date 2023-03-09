@@ -13,6 +13,14 @@ def get_score_element(points):
     text_rect.center = (900, 50)
     return text, text_rect
 
+def get_high_score_element(high_score):
+    font = pygame.font.Font(FONT_STYLE, 16)
+    text = font.render('High Score: '+ str(high_score), True, black_color )
+    text_rect = text.get_rect()
+    text_rect.center = (900, 100)
+    return text, text_rect
+
+
 def get_centered_message (message, width = SCREEN_WIDTH // 2, height = SCREEN_HEIGHT // 2):
     font = pygame.font.Font(FONT_STYLE, 32)
     text = font.render(message, True, black_color)
